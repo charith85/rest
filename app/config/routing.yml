@@ -1,0 +1,8 @@
+screenfony_demo:
+    resource: "@ScreenfonyDemoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
