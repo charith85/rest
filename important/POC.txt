@@ -1,0 +1,37 @@
+1. Update composer.phar using following command 
+php composer.phar self-update 
+
+use 
+php composer.phar self-update --rollback to retrun to previous version 
+
+2. Install Symfony2 in local
+
+composer create-project symfony/framework-standard-edition my_project_name "2.3.*"
+
+ex: php composer.phar create-project symfony/framework-standard-edition rest/  "2.3.*"   
+
+3. Install jms/serializer-bundle 
+
+composer.phar require jms/serializer-bundle @stable
+
+ex: go to website directory and execute below command 
+ php ../composer.phar require jms/serializer-bundle @stable   
+
+*** this will take care the representaion of our resources. Converting objects in to JSON or xml
+
+4. Install friendsofsymfony/rest-bundle @stable 
+php ../composer.phar require friendsofsymfony/rest-bundle @stable
+
+Will make the the api implementaion easier. Taking care most of the standard stufs. 
+and allowing us to focus on just the business logic. 
+
+5. Generate the demo bundle: 
+php app\console generate:bundle Symfony/DemoBundle
+
+6. Register the above two bundles in AppKernal class. 
+     new JMS\SerializerBundle\JMSSerializerBundle(),
+     new FOS\RestBundle\FOSRestBundle(), 
+
+Inital installation with JMSSerializer Bundle and FOSRest Bundle 
+
+
