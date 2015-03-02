@@ -32,6 +32,16 @@ php app\console generate:bundle Symfony/DemoBundle
      new JMS\SerializerBundle\JMSSerializerBundle(),
      new FOS\RestBundle\FOSRestBundle(), 
 
-Inital installation with JMSSerializer Bundle and FOSRest Bundle 
+7. We need a resource to work with. So We create a User entity with some fields. 
+use: 
+php app\console doctrine:generate:entity
+Then Symfony/DemoBundle:User
+Then create few fields: username, password, email 
+
++++++++++++++++++++++++++++++++ 
+8. Do following conigurations for FOSRestBundle 
+1. Enable some listeners (FOSRest bundle ship with set of diffrent listners)
+* format_listener - Simplifies the management of the response format.  
+ 
 
 
